@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WELL IS AGE - Business Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .search-box {
+      margin: 20px;
+      text-align: center;
+    }
+    .search-box input {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #2c3e50;
+      border-radius: 5px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .btn {
+      background: #2c3e50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #34495e;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    footer p {
+      margin: 5px;
+    }
+    .login-form {
+      display: none;
+      background: white;
+      padding: 20px;
+      width: 300px;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>WELL IS AGE</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#" onclick="showLogin()">Login</a>
+      <a href="#">Cart ??</a>
+    </nav>
+  </header>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input type="text" placeholder="Search products..." id="search">
+  </div>
+
+  <!-- Products -->
+  <section class="products" id="productList">
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>High quality product for your business needs.</p>
+      <button class="btn">Add to Cart</button>
+      <button class="btn">Order Now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>Best in class product with premium quality.</p>
+      <button class="btn">Add to Cart</button>
+      <button class="btn">Order Now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>Trusted product used by professionals worldwide.</p>
+      <button class="btn">Add to Cart</button>
+      <button class="btn">Order Now</button>
+    </div>
+  </section>
+
+  <!-- Login Form -->
+  <div class="login-form" id="loginForm">
+    <h2>Login</h2>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="btn">Login</button>
+    <button class="btn" onclick="hideLogin()">Close</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>?? Contact: 8917726835</p>
+    <p>?? Email: sm1501030@gmail.com</p>
+    <p>&copy; 2025 WELL IS AGE. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Show login form
+    function showLogin() {
+      document.getElementById('loginForm').style.display = 'block';
+    }
+    function hideLogin() {
+      document.getElementById('loginForm').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
